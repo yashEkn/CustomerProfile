@@ -4,7 +4,7 @@ pipeline {
 stages {
   stage('maven install') {
     steps {
-      withMaven(traceability: true) {
+      withMaven(maven: 'Maven1', traceability: true) {
         sh 'mvn clean install'
       }
     }
